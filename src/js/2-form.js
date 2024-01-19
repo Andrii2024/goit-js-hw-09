@@ -1,7 +1,7 @@
 const STORAGE_KEY = 'feedback-form-state';
 
 const form = document.querySelector('.feedback-form');
-// const textarea = form.elements.message;
+
 form.addEventListener('input', onFormInput);
 
 function onFormInput() {
@@ -27,8 +27,7 @@ function onFormSubmit(e) {
 }
 restoreData();
 function saveToLS(key, value) {
-  const zip = JSON.stringify(value);
-  localStorage.setItem(key, zip);
+  localStorage.setItem(key, JSON.stringify(value));
 }
 function loadFromLS(key) {
   const zip = localStorage.getItem(key);

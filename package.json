@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "push": "git add .; git commit -m 'update'; git push;",
     "dev": "vite",
     "build": "vite build --base=/hw-9-js/",
     "preview": "vite preview"
