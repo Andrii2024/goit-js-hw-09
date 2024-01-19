@@ -1,4 +1,3 @@
-/* @import url('simplelightbox/dist/simple-lightbox.min.css'); */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -11,7 +10,9 @@ body {
   align-items: flex-start;
   gap: 24px;
 }
-
+img {
+  border-radius: 8px;
+}
 .gallery {
   list-style: none;
   padding: 0;
@@ -26,6 +27,7 @@ body {
 
 .gallery-link {
   text-decoration: none;
+  border-radius: 8px;
 }
 
 .gallery-image {
