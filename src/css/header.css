@@ -18,9 +18,12 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.5;
+  transition: transform 0.4s;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: #fafafa;
+  transform: scale(1.1);
+  box-shadow: 5px 6px 7px;
 }
