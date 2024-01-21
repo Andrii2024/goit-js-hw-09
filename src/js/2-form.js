@@ -5,19 +5,18 @@ const form = document.querySelector('.feedback-form');
 form.addEventListener('input', onFormInput);
 
 function onFormInput() {
-  // console.log(form.elements);
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
   const data = { email, message };
   saveToLS(STORAGE_KEY, data);
 }
 form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
-  if (form.elements.email.value && form.elements.message.value) {
-    const email = form.elements.email.value;
-    const message = form.elements.message.value;
-    const data = { email, message };
+  const trimEmail = form.elements.email.value.trim();
+  const trimMessage = form.elements.message.value.trim();
+  if (trimEmail && trimMessage) {
+    const data = { email: trimEmail, message: trimMessage };
     console.log(data);
     form.reset();
     localStorage.removeItem(STORAGE_KEY);
